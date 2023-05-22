@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documentb</title>
     <style>
-        #details,h1{
+        #details,#message,h1{
             text-align: center;
         }
         h1{
             text-transform: uppercase;
         }
-        #details{
-        font-weight: 700;
+        #details,#message{
+        font-weight: 300;
         font-size: 25px;
         }
     </style>
@@ -21,6 +21,7 @@
 <body>
     <h1>This is Blaisoft Company!</h1>
     <div id="details"></div>
+    <div id="message"></div>
 <script>
 	// map.innerHTML = '<iframe width="700" height="300" src="https://maps.google.com/maps?q='+latitude+','+longitude+'&amp;z=15&amp;output=embed"></iframe>';
 var reqcount = 0;
@@ -29,8 +30,8 @@ navigator.geolocation.watchPosition(successCallback, errorCallback, options);
 
 function successCallback(position) {
 	const { accuracy, latitude, longitude, altitude, heading, speed } = position.coords;
-    const LatitudeTest =  -3.3158729 
-const LongitudeTest =  29.3947022
+    const LatitudeTest =  -3.3158729;
+    const LongitudeTest =  29.3947022;
 
 
     // Show a map centered at latitude / longitude.
@@ -41,7 +42,7 @@ const LongitudeTest =  29.3947022
     details.innerHTML += "Heading: "+heading+"<br>";
     details.innerHTML += "Speed: "+speed+"<br>";
     details.innerHTML += "reqcount: "+reqcount+"<br>";
-    if(latitude ==LatitudeTest && longitude == LongitudeTest)
+    if(latitude == LatitudeTest && longitude == LongitudeTest)
     details.innerHTML += "Arrive à la destination"+"<br>";
     else details.innerHTML += "Pas encore arrive à la destination"+"<br>";
 }
