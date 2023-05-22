@@ -62,7 +62,6 @@ let distanceByArrive = customerSchema.sort((a, b) => {
 })
 
 console.log(distanceByArrive)
-
 for (
   let index = 0;
   index <= distanceByArrive[distanceByArrive.length - 1]["distance"];
