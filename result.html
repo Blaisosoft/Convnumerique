@@ -30,10 +30,9 @@ navigator.geolocation.watchPosition(successCallback, errorCallback, options);
 
 function successCallback(position) {
 	const { accuracy, latitude, longitude, altitude, heading, speed } = position.coords;
+    // initial value for testing
     const LatitudeTest =  -3.3158729;
     const LongitudeTest =  29.3947022;
-
-
     // Show a map centered at latitude / longitude.
     reqcount++;
     details.innerHTML = "Accuracy: "+accuracy+"<br>";
