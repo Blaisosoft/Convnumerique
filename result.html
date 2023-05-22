@@ -12,11 +12,17 @@
         h1{
             text-transform: uppercase;
         }
+        #massage{
+        font-weight: 700;
+        font-size: 35px;
+        font-style: italic;
+        }
     </style>
 </head>
 <body>
     <h1>This is Blaisoft Company!</h1>
     <div id="details"></div>
+    <div id="message"></div>
 <script>
 	// map.innerHTML = '<iframe width="700" height="300" src="https://maps.google.com/maps?q='+latitude+','+longitude+'&amp;z=15&amp;output=embed"></iframe>';
 var reqcount = 0;
@@ -36,9 +42,9 @@ const LongitudeTest =  29.3947022
     details.innerHTML += "Altitude: "+altitude+"<br>";
     details.innerHTML += "Heading: "+heading+"<br>";
     details.innerHTML += "Speed: "+speed+"<br>";
-    details.innerHTML += "reqcount: "+reqcount;
+    details.innerHTML += "reqcount: "+reqcount+"<br> <br>";
     if(latitude ==LatitudeTest && longitude == LongitudeTest)
-    details.innerHTML += "Arrive"+"<br>";
+    message.innerHTML += "Arrive à la destination"+"<br>";
 
 }
 function errorCallback(error) {
