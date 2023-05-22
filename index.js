@@ -1,11 +1,19 @@
-let distance = [3, 3, 3, 3, 2, 2, 2, 6, 6, 9, 11, 11, 13, 12]
+//1. creating a table of obcustomerArriveect {}[]
+// 1.1 we are creating  distance from gps for finding distance
 let customerSchema = [
   {
     name: "Blaise",
     placeNumber: 2,
     depart: "Musaga",
-    destination: "jenda",
+    destination: "customerArriveenda",
     distance: 45,
+  },
+  {
+    name: "Arakaza",
+    placeNumber: 20,
+    depart: "Musaga",
+    destination: "rutana",
+    distance: 140,
   },
   {
     name: "Patrick",
@@ -57,31 +65,39 @@ let customerSchema = [
     distance: 140,
   },
 ]
-let distanceByArrive = customerSchema.sort((a, b) => {
+// 2.sort by distance of arrive
+
+let sortDistanceByFirstArrive = customerSchema.sort((a, b) => {
   return a.distance - b.distance
 })
-
-console.log(distanceByArrive)
+// 3.debug if has done good sort by distance
+console.table(sortDistanceByFirstArrive)
+// 4.display all customer and prononce them if they arrive
 for (
-  let index = 0;
-  index <= distanceByArrive[distanceByArrive.length - 1]["distance"];
-  index++
+  let currentDist = 0;
+  currentDist <=
+  sortDistanceByFirstArrive[sortDistanceByFirstArrive.length - 1]["distance"];
+  currentDist++
 ) {
-  let result = distanceByArrive.filter(
-    (distanceCurrent) => distanceCurrent.distance == index
+  let customerWithTheSameDestination = sortDistanceByFirstArrive.filter(
+    (distanceCurrent) => distanceCurrent.distance == currentDist
   )
-  if (result.length != 0) {
+  if (customerWithTheSameDestination.length != 0) {
     console.log(
-      `J'ai ${result.length} client${
-        result.length > 1 ? "s" : ""
-      } qui arrive a`,
-      index + "km"
+      `I have ${customerWithTheSameDestination.length} customer${
+        customerWithTheSameDestination.length > 1 ? "s" : ""
+      } who arrive at`,
+      currentDist + "km"
     )
 
-    for (let j = 0; j < result.length; j++) {
+    for (let customerArrive = 0; customerArrive < customerWithTheSameDestination.length; customerArrive++) {
       console.log(
-        `${j + 1})` + " " + result[j]["name"] + " " + ` arrive à`,
-        result[j]["destination"]
+        `${customerArrive + 1})` +
+          " " +
+          customerWithTheSameDestination[customerArrive]["name"] +
+          " " +
+          `arrive at`,
+        customerWithTheSameDestination[customerArrive]["destination"]
       )
     }
     console.log("=======================================")

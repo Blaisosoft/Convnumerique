@@ -1,0 +1,3 @@
+/*
+*algoriyhm of project
+*/
