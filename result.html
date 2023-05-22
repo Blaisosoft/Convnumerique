@@ -12,9 +12,9 @@
         h1{
             text-transform: uppercase;
         }
-        #massage{
+        #details{
         font-weight: 700;
-        font-size: 35px;
+        font-size: 25px;
         font-style: italic;
         }
     </style>
@@ -42,9 +42,9 @@ const LongitudeTest =  29.3947022
     details.innerHTML += "Altitude: "+altitude+"<br>";
     details.innerHTML += "Heading: "+heading+"<br>";
     details.innerHTML += "Speed: "+speed+"<br>";
-    details.innerHTML += "reqcount: "+reqcount+"<br> <br>";
+    details.innerHTML += "reqcount: "+reqcount+"<br>";
     if(latitude ==LatitudeTest && longitude == LongitudeTest)
-    message.innerHTML += "Arrive à la destination"+"<br>";
+    details.innerHTML += "Arrive à la destination"+"<br>";
 
 }
 function errorCallback(error) {
