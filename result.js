@@ -24,7 +24,6 @@ function successCallback(position) {
     LongitudeTest +
     "<br>"
   details.innerHTML += "=======================" + "<br>"
-
   details.innerHTML += "Altitude: " + altitude + "<br>"
   details.innerHTML += "Heading: " + heading + "<br>"
   details.innerHTML += "Speed: " + speed + "<br>"
