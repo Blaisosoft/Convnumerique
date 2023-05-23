@@ -35,13 +35,14 @@ function successCallback(position) {
     const LongitudeTest =  29.39470220;
     // Show a map centered at latitude / longitude.
     reqcount++;
+    // if you want to precise after float number you do like this e.g: longititude.toFixed(3)
     details.innerHTML = "Accuracy: "+accuracy+"<br>";
     details.innerHTML += "Latitude: "+latitude+" | Longitude: "+longitude+"<br>";
     details.innerHTML += "Altitude: "+altitude+"<br>";
     details.innerHTML += "Heading: "+heading+"<br>";
     details.innerHTML += "Speed: "+speed+"<br>";
     details.innerHTML += "reqcount: "+reqcount+"<br>";
-    if(latitude == LatitudeTest && longitude == LongitudeTest)
+    if(latitude.toFixed(3) == LatitudeTest.toFixed(3) && longitude.toFixed(3) == LongitudeTest.toFixed(3))
     details.innerHTML += "Arrive à la destination"+"<br>";
     else details.innerHTML += "Pas encore arrive à la destination"+"<br>";
 }
