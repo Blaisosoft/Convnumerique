@@ -6,9 +6,9 @@ navigator.geolocation.watchPosition(successCallback, errorCallback, options)
 function successCallback(position) {
   const { accuracy, latitude, longitude, altitude, heading, speed } =
     position.coords
-  // initial value for testing
-  const LatitudeTest = -3.31587293
-  const LongitudeTest = 29.3947022
+  // initial value for testing ,
+  const LatitudeTest = -3.3151321
+  const LongitudeTest = 29.3928222
   const jenda = { LatitudeTest, LongitudeTest }
   // Show a map centered at latitude / longitude.
   reqcount++
@@ -20,10 +20,7 @@ function successCallback(position) {
   details.innerHTML += "Heading: " + heading + "<br>"
   details.innerHTML += "Speed: " + speed + "<br>"
   details.innerHTML += "reqcount: " + reqcount + "<br>"
-  if (
-    latitude.toFixed(1) == LatitudeTest.toFixed(1) &&
-    longitude.toFixed(1) == LongitudeTest.toFixed(1)
-  )
+  if (latitude == LatitudeTest && longitude == LongitudeTest)
     details.innerHTML += "Arrive à la destination" + "<br>"
   else details.innerHTML += "Pas encore arrive à la destination" + "<br>"
 }
