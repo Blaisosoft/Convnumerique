@@ -19,40 +19,9 @@
     </style>
 </head>
 <body>
-    <h1>This is Blaisoft Company!</h1>
+    <h1>This is BlaisoTracking Company!</h1>
     <div id="details"></div>
     <div id="message"></div>
-<script>
-	// map.innerHTML = '<iframe width="700" height="300" src="https://maps.google.com/maps?q='+latitude+','+longitude+'&amp;z=15&amp;output=embed"></iframe>';
-var reqcount = 0;
-
-navigator.geolocation.watchPosition(successCallback, errorCallback, options);
-
-function successCallback(position) {
-	const { accuracy, latitude, longitude, altitude, heading, speed } = position.coords;
-    // initial value for testing
-    const LatitudeTest =  -3.31587293;
-    const LongitudeTest =  29.3947022;
-    // Show a map centered at latitude / longitude.
-    reqcount++;
-    // if you want to precise after float number you do like this e.g: longititude.toFixed(1)
-    details.innerHTML = "Accuracy: "+accuracy+"<br>";
-    details.innerHTML += "Latitude: "+latitude+" | Longitude: "+longitude+"<br>";
-    details.innerHTML += "Altitude: "+altitude+"<br>";
-    details.innerHTML += "Heading: "+heading+"<br>";
-    details.innerHTML += "Speed: "+speed+"<br>";
-    details.innerHTML += "reqcount: "+reqcount+"<br>";
-    if(latitude.toFixed(1) == LatitudeTest.toFixed(1) && longitude.toFixed(1) == LongitudeTest.toFixed(1))
-    details.innerHTML += "Arrive à la destination"+"<br>";
-    else details.innerHTML += "Pas encore arrive à la destination"+"<br>";
-}
-function errorCallback(error) {}
-var options = {
-	// enableHighAccuracy: false,
-	// timeout: 5000,
-	// maximumAge: 0
-};
-
-</script>
+<script src="result.js"></script>
 </body>
 </html>
