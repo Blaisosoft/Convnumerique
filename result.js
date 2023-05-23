@@ -16,14 +16,14 @@ function successCallback(position) {
   details.innerHTML = "Accuracy: " + accuracy + "<br>"
   details.innerHTML +=
     "Latitude: " + latitude + " | Longitude: " + longitude + "<br>"
-  details.innerHTML += "===========================" + "<br>"
+  details.innerHTML += "=======================" + "<br>"
   details.innerHTML +=
     "LatitudeTest: " +
     LatitudeTest +
     " | LongitudeTest: " +
     LongitudeTest +
     "<br>"
-  details.innerHTML += "===========================" + "<br>"
+  details.innerHTML += "=======================" + "<br>"
 
   details.innerHTML += "Altitude: " + altitude + "<br>"
   details.innerHTML += "Heading: " + heading + "<br>"
