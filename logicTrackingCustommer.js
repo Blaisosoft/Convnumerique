@@ -1,3 +1,4 @@
+// https://maps.googleapis.com/maps/api/distancematrix/json?orgins=-3.3158729,29.3947022&destinations=-3.3153281,-3.3158729,29.3947022&%20key=AIzaSyBDwhSTg6-3m2mj2wOjUG7EO9Zxu0JA1UY
 //1. creating a table of obcustomerArriveect {}[]
 // 1.1 we are creating  distance from gps for finding distance
 let customerSchema = [

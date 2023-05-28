@@ -9,7 +9,7 @@ function successCallback(position) {
   // initial value for testing ,
   const LatitudeTest = -3.3153281
   const LongitudeTest = 29.3947347
-  const jenda = { LatitudeTest, LongitudeTest }
+  //   console.log(position)
   // Show a map centered at latitude / longitude.
   reqcount++
   // if you want to precise after float number you do like this e.g: longititude.toFixed(1)
@@ -38,7 +38,7 @@ function successCallback(position) {
 }
 function errorCallback(error) {}
 var options = {
-  // enableHighAccuracy: false, ça relentit l'application
+  // enableHighAccuracy: false, ça ralentit l'application
   // timeout: 5000,
   // maximumAge: 0
 }
