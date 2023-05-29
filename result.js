@@ -8,7 +8,9 @@ function successCallback(position) {
     position.coords
   // initial value for testing ,
   const LatitudeTest = -3.3153281
+  const latDiff =((latitude*-1) -3.3153281)
   const LongitudeTest = 29.3947347
+  const longDiff = (longitude-(29.3947347))
   //   console.log(position)
   // Show a map centered at latitude / longitude.
   reqcount++
@@ -28,7 +30,9 @@ function successCallback(position) {
   details.innerHTML += "Heading: " + heading + "<br>"
   details.innerHTML += "Speed: " + speed + "<br>"
   details.innerHTML += "reqcount: " + reqcount + "<br>"
-  if (latitude == LatitudeTest && longitude == LongitudeTest)
+  details.innerHTML += "longDiff: " + longDiff.toFixed(4) + "<br>"
+  details.innerHTML += "latDiff: " + latDiff.toFixed(4) + "<br>"
+  if (longDiff.toFixed(4) < 0.1)
     details.innerHTML +=
       "<span class='trackingresponse'>Arrive à la destination</span>" + "<br>"
   else
@@ -38,7 +42,7 @@ function successCallback(position) {
 }
 function errorCallback(error) {}
 var options = {
-  // enableHighAccuracy: false, ça ralentit l'application
-  // timeout: 5000,
-  // maximumAge: 0
+  enableHighAccuracy: true, //ça ralentit l'application
+  timeout: 5000,
+  maximumAge: 0
 }
