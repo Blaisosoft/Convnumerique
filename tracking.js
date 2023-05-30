@@ -6,8 +6,8 @@ const latitudeCurrent = 31.230416
 const LongitudeCurrent = 121.473701
 start.addEventListener("click", () => {
   navigator.geolocation.watchPosition(
-    (data) => {
-      const { latitude, longitude } = data.coords
+    (position) => {
+      const { latitude, longitude } = position.coords
       console.log(`latitude: ${latitude} Longitude: ${longitude}`)
       map.innerHTML =
         '<iframe width="700" height="300" src="https://maps.google.com/maps?q=' +

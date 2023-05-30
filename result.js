@@ -1,4 +1,5 @@
 const details = document.querySelector("#details")
+const coordinates = []
 var reqcount = 0
 
 navigator.geolocation.watchPosition(successCallback, errorCallback, options)
@@ -11,6 +12,8 @@ function successCallback(position) {
   const latDiff =((Math.abs(latitude)) - LatitudeTest)
   const LongitudeTest = 29.3968479
   const longDiff = ((Math.abs(longitude))-(LongitudeTest))
+  coordinates.push(latitude, longitude)
+  window.localStorage.setItem("coordinates", JSON.stringify(coordinates))
   //   console.log(position),
   // Show a map centered at latitude / longitude.
   reqcount++
