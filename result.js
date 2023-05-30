@@ -32,7 +32,6 @@ function successCallback(position) {
   details.innerHTML += "reqcount: " + reqcount + "<br>"
   details.innerHTML += "=======================" + "<br>"
   details.innerHTML += "longDiff: " + longDiff.toFixed(4) + "<br>"
-  details.innerHTML += "latDiff: " + latDiff.toFixed(4) + "<br>"
   details.innerHTML += "=======================" + "<br>"
   if (longDiff.toFixed(4) <= 0.0001)
     details.innerHTML +=
