@@ -7,11 +7,11 @@ function successCallback(position) {
   const { accuracy, latitude, longitude, altitude, heading, speed } =
     position.coords
   // initial value for testing ,
-  const LatitudeTest = -3.3153281
-  const latDiff =((latitude*-1) -3.3153281)
-  const LongitudeTest = 29.3947347
-  const longDiff = (longitude-(29.3947347))
-  //   console.log(position)
+  const LatitudeTest = -3.323499
+  const latDiff =((Math.abs(latitude)) - LatitudeTest)
+  const LongitudeTest = 29.3968479
+  const longDiff = ((Math.abs(longitude))-(LongitudeTest))
+  //   console.log(position),
   // Show a map centered at latitude / longitude.
   reqcount++
   // if you want to precise after float number you do like this e.g: longititude.toFixed(1)
@@ -31,6 +31,7 @@ function successCallback(position) {
   details.innerHTML += "Speed: " + speed + "<br>"
   details.innerHTML += "reqcount: " + reqcount + "<br>"
   details.innerHTML += "=======================" + "<br>"
+  details.innerHTML += "latDiff: " + latDiff.toFixed(4) + "<br>"
   details.innerHTML += "longDiff: " + longDiff.toFixed(4) + "<br>"
   details.innerHTML += "=======================" + "<br>"
   if (longDiff.toFixed(4) <= 0.0001)
